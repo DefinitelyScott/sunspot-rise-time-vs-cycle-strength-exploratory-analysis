@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sunspot-cycles"
+version = "0.1.0"
+description = "Do stronger sunspot cycles rise faster? An exploratory analysis of 1700-2008 data."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "matplotlib==3.10.9",
+    "pandas==2.3.3",
+    "scipy==1.18.1",
+    "statsmodels==0.15.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "UP", "B", "ARG", "SLF"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["SLF001", "ARG", "E402"]

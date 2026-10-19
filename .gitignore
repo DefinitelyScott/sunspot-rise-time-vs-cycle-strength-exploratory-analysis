@@ -1,0 +1,27 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Regenerable analysis artifacts (run `python analysis.py` to recreate).
+# The figures are the exception: README.md embeds them, so they are committed
+# and must be regenerated alongside any change to the analysis.
+outputs/*
+!outputs/*.png
+
+# Secrets and local settings
+.env
+.env.*
+
+# OS and editor noise
+.DS_Store
+.idea/
+.vscode/

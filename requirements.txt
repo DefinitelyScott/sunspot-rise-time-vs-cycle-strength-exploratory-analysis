@@ -1,0 +1,7 @@
+# Pinned so every number in README.md is reproducible. The sunspot table is a
+# static file shipped inside statsmodels, so the statsmodels pin also pins the data.
+matplotlib==3.10.9
+pandas==2.3.3
+scipy==1.18.1
+statsmodels==0.15.0
+pytest==8.4.2
